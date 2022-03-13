@@ -1,3 +1,20 @@
-a{
-    display: block;
+.dashboard_container{
+    
+    .home_btn, .search_btn, .library_btn, .playlist_btn, .liked_song_btn {
+        color: var(--black);
+        width: 50%;
+        margin: 0 auto;
+        text-align: left;
+        border: 0;
+        font-weight: 900;
+    }
+}
+
+.liked_song_btn:hover { 
+    background-color: var(--white);
+    opacity: 0.5;
+}
+
+.liked_song_btn:focus{
+
 }

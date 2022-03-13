@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
-$bgColor: #dddddd;
-$orangeColor: #e4461e;
-$cardColor: #e8e8e8;
+:root{
+--bg:  #dfe1eb;
+--bglight: #ebecf0;
+--highlight: c7b1ef;
+--white: #FAF9FB;
+--black: #26192f;
+}
