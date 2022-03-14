@@ -1,20 +1,27 @@
-.dashboard_container{
-    
-    .home_btn, .search_btn, .library_btn, .playlist_btn, .liked_song_btn {
+.dashboard_container {
+    padding: 20px 0;
+    .home_btn,
+    .search_btn,
+    .library_btn,
+    .playlist_btn,
+    .liked_song_btn {
         color: var(--black);
-        width: 50%;
-        margin: 0 auto;
+        margin-left: 25%;
         text-align: left;
         border: 0;
         font-weight: 900;
+        opacity: 0.8;
+    }
+
+    .home_btn:hover, .home_btn:focus,
+    .search_btn:hover, .search_btn:focus,
+    .library_btn:hover, .library_btn:focus,
+    .playlist_btn:hover, .playlist_btn:focus,
+    .liked_song_btn:hover, .liked_song_btn:focus {
+        background-color: var(--highlight);
+        outline: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        opacity: 1;
     }
 }
 
-.liked_song_btn:hover { 
-    background-color: var(--white);
-    opacity: 0.5;
-}
-
-.liked_song_btn:focus{
-
-}
