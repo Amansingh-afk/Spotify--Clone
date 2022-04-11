@@ -6,7 +6,8 @@ import { PageHomeComponent } from './page-home/page-home.component';
 import { RecentlyPlayedComponent } from './page-home-components/recently-played/recently-played.component';
 import { TodaysHitComponent } from './page-home-components/todays-hit/todays-hit.component';
 import { HindiPartyComponent } from './page-home-components/hindi-party/hindi-party.component';
-import { BannerComponent } from './page-home-components/banner/banner.component';
+import { HomeBannerComponent } from './page-home-components/home-banner/home-banner.component';
+import { TestComponent } from './page-home-components/test/test.component';
 
 
 
@@ -16,7 +17,8 @@ import { BannerComponent } from './page-home-components/banner/banner.component'
     RecentlyPlayedComponent,
     TodaysHitComponent,
     HindiPartyComponent,
-    BannerComponent
+    HomeBannerComponent,
+    TestComponent
   ],
   imports: [
     CommonModule, 

@@ -1,27 +1,65 @@
-.dashboard_container {
-    padding: 20px 0;
-    .home_btn,
-    .search_btn,
-    .library_btn,
-    .playlist_btn,
-    .liked_song_btn {
-        color: var(--black);
-        margin-left: 25%;
-        text-align: left;
-        border: 0;
-        font-weight: 900;
-        opacity: 0.8;
-    }
 
-    .home_btn:hover, .home_btn:focus,
-    .search_btn:hover, .search_btn:focus,
-    .library_btn:hover, .library_btn:focus,
-    .playlist_btn:hover, .playlist_btn:focus,
-    .liked_song_btn:hover, .liked_song_btn:focus {
-        background-color: var(--highlight);
-        outline: none;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        opacity: 1;
-    }
+aside{
+    // width: 18%;
+    border-right:1px solid rgb(204, 204, 204,0.2);
+    box-sizing: border-box;
+    padding: 10px 48px;
+    padding-bottom: 0;
+    background-color: #fff;
+    
+}
+
+.profile_img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0 12px 16px 0  rgb(0,0,0,0.13);
+}
+
+#user-div{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#user-div  h3{
+    font-size: 14px;
+    margin: 0;
+    margin-top:10px;
+}
+
+#user-div p{
+    font-size: 12px;
+    margin: 0;
+    color: #a7afc9;
+}
+
+.list-para{
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#music-h3{
+    color: #a7afc9;
+    font-size: 14px;
+    margin-top: 30px;
+    letter-spacing: 0.5px;
+}
+
+i{
+    color: #a7afc9;
+    margin-right: 20px;
+}
+
+#menu-div{
+    margin-top: 30%;
+}
+.list-para:hover {
+    background-color: floralwhite;
+}
+
+div > i{
+    margin-right: 2px;
+    cursor: pointer;
 }
 

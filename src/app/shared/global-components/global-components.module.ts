@@ -3,15 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { PageErrorComponent } from './page-error/page-error.component';
 import { MusicCardComponent } from './music-card/music-card.component';
-import { BannerComponent } from './banner/banner.component';
 
 
 
 @NgModule({
   declarations: [
     PageErrorComponent,
-    MusicCardComponent,
-    BannerComponent
+    MusicCardComponent
   ],
   imports: [
     CommonModule,
@@ -19,8 +17,7 @@ import { BannerComponent } from './banner/banner.component';
   ],
   exports: [
     PageErrorComponent,
-    MusicCardComponent,
-    BannerComponent
+    MusicCardComponent
   ]
 })
 export class GlobalComponentsModule { }
