@@ -2,11 +2,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-#sub-header h3{
+    h3{
     letter-spacing: 0.7px;
     font-size: 17px;
+    }   
 }
 #angle-icon{
     margin: 0 10px;
+}
+.carousel-control-next, .carousel-control-prev{
+    position: relative !important;
+    opacity: 1;
+}
+button {
+    i{
+        color: #000;
+        font-size: 22px;
+    }
 }

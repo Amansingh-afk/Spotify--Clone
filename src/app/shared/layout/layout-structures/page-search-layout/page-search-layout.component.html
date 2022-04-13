@@ -1,1 +1,12 @@
-<p>page-search-layout works!</p>
+
+<div class="container-fluid h-100">
+    <div class="row page_container">
+        <div class="col-md-2 p-0 dashboard h-100 sticky-top">
+            <app-dashboard></app-dashboard>
+        </div>
+        <div class="col-md-10 py-3 home">
+            <app-home-header></app-home-header>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
