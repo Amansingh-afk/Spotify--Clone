@@ -19,7 +19,8 @@ import { PlayBarComponent } from './play-bar/play-bar.component';
   ],
   exports: [
     PageErrorComponent,
-    MusicCardComponent
+    MusicCardComponent,
+    PlayBarComponent
   ]
 })
 export class GlobalComponentsModule { }

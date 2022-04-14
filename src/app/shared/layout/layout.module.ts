@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { GlobalComponentsModule } from '../global-components/global-components.module'
 
 import { DashboardComponent } from './layout-components/dashboard/dashboard.component';
 import { HomeHeaderComponent } from './layout-components/home-header/home-header.component';
@@ -24,7 +25,9 @@ import { PageLibraryLayoutComponent } from './layout-structures/page-library-lay
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    GlobalComponentsModule
+
   ],
   exports: [
     PageHomeLayoutComponent,
