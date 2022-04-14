@@ -53,9 +53,15 @@ i{
 
 #menu-div{
     margin-top: 30%;
+    color: #a7afc9;
 }
 .list-para:hover {
-    background-color: floralwhite;
+    color: #000;
+    .fa{
+        color: #000;
+        transform: scale(1.1);
+    }
+
 }
 
 div > i{
