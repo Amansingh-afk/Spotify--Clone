@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recently-played.component.scss']
 })
 export class RecentlyPlayedComponent implements OnInit {
+  cardData: Array<{ title: string, imgpath: string}> = [
+
+  ];
 
   constructor() { }
 

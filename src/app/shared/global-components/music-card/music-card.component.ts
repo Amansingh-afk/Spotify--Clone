@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-music-card',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./music-card.component.scss']
 })
 export class MusicCardComponent implements OnInit {
-
+@Input () cardTitle= '';
+@Input () urlpath = '';
   constructor() { }
 
   ngOnInit(): void {

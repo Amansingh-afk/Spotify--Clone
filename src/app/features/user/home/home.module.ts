@@ -8,6 +8,9 @@ import { TodaysHitComponent } from './page-home-components/todays-hit/todays-hit
 import { HindiPartyComponent } from './page-home-components/hindi-party/hindi-party.component';
 import { HomeBannerComponent } from './page-home-components/home-banner/home-banner.component';
 import { TestComponent } from './page-home-components/test/test.component';
+import { PopularAlbumComponent } from './page-home-components/popular-album/popular-album.component';
+import { NewMusicComponent } from './page-home-components/new-music/new-music.component';
+import { RecommendedComponent } from './page-home-components/recommended/recommended.component';
 
 
 
@@ -18,7 +21,10 @@ import { TestComponent } from './page-home-components/test/test.component';
     TodaysHitComponent,
     HindiPartyComponent,
     HomeBannerComponent,
-    TestComponent
+    TestComponent,
+    PopularAlbumComponent,
+    NewMusicComponent,
+    RecommendedComponent
   ],
   imports: [
     CommonModule, 
