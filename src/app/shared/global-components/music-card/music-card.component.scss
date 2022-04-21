@@ -25,11 +25,10 @@
     left: 90px;
     border: 0;
     border-radius: 50%;
-    background: green;
+    background-color: ece9e6;
     svg{
-        font-size: 28px;
-        // color: green;
-        // background: ;
+        font-size: 22px;
+        color: #f12711;
     }
 }
 .card_container:hover {
@@ -38,6 +37,9 @@
     }
     .play_btn{
         display: block;
+    }
+    .play_btn:hover {
+        transform: scale(1.1);
     }
 }
 

@@ -6,3 +6,30 @@
         height: 250px;
     }
 }
+.id_one {
+    background: #ff4b1f; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1fddff, #ff4b1f); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #1fddff,
+        #ff4b1f
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.id_two {
+    background: #c02425; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f0cb35, #c02425); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #f0cb35,
+        #c02425
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.id_three {
+    background: #004ff9; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fff94c, #004ff9); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #fff94c,
+        #004ff9
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
