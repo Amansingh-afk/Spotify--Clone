@@ -1,1 +1,63 @@
-<p>recommended works!</p>
+<div class="container my-4 p-0">
+    <div id="recom_carousel" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="false">
+        <div id="sub-header">
+            <h3>Recommended For Today</h3>
+            <div class="d-flex">
+                <button class="carousel-control-prev p-0 mx-2" type="button" data-bs-target="#recom_carousel"
+                    data-bs-slide="prev">
+                    <i class="fa fa-angle-left"></i>
+                </button>
+                <button class="carousel-control-next mx-2" type="button" data-bs-target="#recom_carousel"
+                    data-bs-slide="next">
+                    <i class="fa fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container p-0">
+                    <div class="row justify-content-around ">
+                        <div class="col-md-2" *ngFor = "let i of cardInfo">
+                            <app-music-card [cardTitle]="i.title" [urlpath]="i.imgurl"></app-music-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container p-0">
+                    <div class="row justify-content-around" >
+                        <div class="col-md-2" *ngFor = "let i of cardInfo2" >
+                            <app-music-card [cardTitle]="i.title" [urlpath]="i.imgurl"></app-music-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="carousel-item">
+                <div class="container p-0">
+                    <div class="row justify-content-around">
+                        <div class="col-md-2">
+                            <app-music-card></app-music-card>
+                        </div>
+                        <div class="col-md-2">
+                            <app-music-card></app-music-card>
+                        </div>
+                        <div class="col-md-2">
+                            <app-music-card></app-music-card>
+                        </div>
+                        <div class="col-md-2">
+                            <app-music-card></app-music-card>
+                        </div>
+                        <div class="col-md-2">
+                            <app-music-card></app-music-card>
+                        </div>
+                        <div class="col-md-2">
+                            <app-music-card></app-music-card>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+    </div>
+</div>

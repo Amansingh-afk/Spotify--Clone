@@ -1,0 +1,24 @@
+#sub-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h3 {
+        color: #d8d8d8;
+        font-weight: 600;
+        letter-spacing: 0.7px;
+        font-size: 17px;
+    }    
+}
+#angle-icon{
+    margin: 0 10px;
+}
+.carousel-control-next, .carousel-control-prev{
+    position: relative !important;
+    opacity: 1;
+}
+button {
+    i{
+        color: var(--body-color);
+        font-size: 22px;
+    }
+}

@@ -7,20 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodaysHitComponent implements OnInit {
   cardData: Array<{ title: string, imgurl: string }> = [
-    { title: 'Top Hits Hindi', imgurl: '' },
-    { title: 'Top Hits Punjabi', imgurl: '' },
-    { title: 'Top Hits English', imgurl: '' },
-    { title: 'Hip Te Hop', imgurl: '' },
-    { title: 'Punjabi Pop', imgurl: '' },
-    { title: 'Happy Vibes', imgurl: '' }
+    { title: 'Top Hits Hindi', imgurl: 'assets/image/todays-hit/hits-hindi.jpeg' },
+    { title: 'Top Hits Punjabi', imgurl: 'assets/image/todays-hit/punjabi-hits.jpeg' },
+    { title: 'Trending Today', imgurl: 'assets/image/todays-hit/top-hits.jpeg' },
+    { title: 'Bollywood Butter', imgurl: 'assets/image/todays-hit/bollywood-butter.jpeg' },
+    { title: 'Punjabi Beats', imgurl: 'assets/image/todays-hit/punjabi-beats.jpeg' },
+    { title: 'Top Hits Hindi', imgurl: 'assets/image/todays-hit/hits-hindi2.jpeg' }
   ];
   cardData2: Array<{ title: string, imgurl: string }> = [
-    { title: 'Rap 91', imgurl: '' },
-    { title: 'Party Chale On', imgurl: '' },
-    { title: 'Filmy Hangover', imgurl: '' },
-    { title: 'Safar Mix', imgurl: '' },
-    { title: 'Metal Most Streamed', imgurl: '' },
-    { title: 'PDM', imgurl: '' }
+    { title: 'Trending', imgurl: 'assets/image/todays-hit/today-1.jpeg' },
+    { title: 'Trending', imgurl: 'assets/image/todays-hit/today-2.jpeg' },
+    { title: 'Trending', imgurl: 'assets/image/todays-hit/today3.jpeg' },
+    { title: 'Trending', imgurl: 'assets/image/todays-hit/today4.jpeg' },
+    { title: 'Trending', imgurl: 'assets/image/todays-hit/today-2.jpeg' },
+    { title: 'Trending', imgurl: 'assets/image/todays-hit/today-1.jpeg' }
   ];
 
   constructor() { }
