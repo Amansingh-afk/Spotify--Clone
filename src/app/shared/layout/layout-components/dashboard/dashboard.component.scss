@@ -32,7 +32,7 @@
             font-size: 14px;
             margin: 0;
             margin-top: 10px;
-            color: #a7afc9;
+            color: #d8d8d8;
         }
         p {
             font-size: 12px;
@@ -70,7 +70,7 @@
     }
     &-link {
         &:hover,
-        .is-active {
+         &.active {
             color: #fff;
             font-weight: 600;
             &:nth-child(2n + 1) {

@@ -1,5 +1,8 @@
-.banner{
+.carousel_container {
     width: 100%;
-    height: 250px;
+    max-height: 250px;
     margin: 0 auto;
+    img {
+        height: 250px;
+    }
 }

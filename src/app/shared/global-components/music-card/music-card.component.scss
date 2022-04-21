@@ -17,8 +17,27 @@
         color: var(--body-color);
     }
 }
+.play_btn{
+	position: absolute;
+    z-index: 2;
+    top: 90px;
+    display: none;
+    left: 90px;
+    border: 0;
+    border-radius: 50%;
+    background: green;
+    svg{
+        font-size: 28px;
+        // color: green;
+        // background: ;
+    }
+}
 .card_container:hover {
     img{
         transform: scale(1.1,1.1);
     }
+    .play_btn{
+        display: block;
+    }
 }
+
