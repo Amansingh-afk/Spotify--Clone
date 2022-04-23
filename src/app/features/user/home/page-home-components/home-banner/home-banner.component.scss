@@ -1,9 +1,12 @@
-.carousel_container {
+.carousel {
     width: 100%;
     max-height: 250px;
     margin: 0 auto;
     img {
         height: 250px;
+    }
+    &-inner {
+        border-radius: 10px;
     }
 }
 .id_one {
@@ -13,16 +16,12 @@
         to right,
         #1fddff,
         #ff4b1f
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ); 
 }
 .id_two {
     background: #c02425; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #f0cb35, #c02425); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-        to right,
-        #f0cb35,
-        #c02425
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #f0cb35, #c02425);
 }
 .id_three {
     background: #004ff9; /* fallback for old browsers */
@@ -31,5 +30,5 @@
         to right,
         #fff94c,
         #004ff9
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ); 
 }
