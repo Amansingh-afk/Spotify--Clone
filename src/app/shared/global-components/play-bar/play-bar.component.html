@@ -1,47 +1,30 @@
-<!-- <div class="bar_container bg-secondary w-100 text-center p-4">
-    <div class="song_name fw-bold">PLAY BAR</div>
-</div> -->
 
-<!-- Tracks used in this music/audio player application are free to use. I downloaded them from Soundcloud and NCS websites. I am not the owner of these tracks. -->
 
-<div id="app-cover">
-    <div id="player">
-        <div id="player-track">
-            <div id="album-name"></div>
-            <div id="track-name"></div>
-            <div id="track-time">
-                <div id="current-time"></div>
-                <div id="track-length"></div>
+<div class="bottom-bar">
+    <div class="bottom-bar--left-col">
+        <div class="bottom-bar--left-col--song">
+            <div class="bottom-bar--left-col--song--img">
+                <div class="bottom-bar--left-col--song--img--pull-up">
+                    <i class='fa fa-angle-up'></i>
+                </div>
+                <img src="http://via.placeholder.com/150x150" alt="">
             </div>
-            <div id="s-area">
-                <div id="ins-time"></div>
-                <div id="s-hover"></div>
-                <div id="seek-bar"></div>
+            <div class="bottom-bar--left-col--song--details">
+                <div class="bottom-bar--left-col--song--details--wrapper">
+                    <a href="#" class="bottom-bar--left-col--song--details--title">Song Title</a>
+                </div>
+                <div class="bottom-bar--left-col--song--details--wrapper">
+                    <a href="#" class="bottom-bar--left-col--song--details--artist">Artist</a>
+                </div>
             </div>
         </div>
-        <div id="player-content">
-            <div id="album-art">
-                <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg"
-                    class="active" id="_1">
-                <div id="buffer-box">Buffering ...</div>
-            </div>
-            <div id="player-controls">
-                <div class="control">
-                    <div class="button" id="play-previous">
-                        <i class="fa fa-backward"></i>
-                    </div>
-                </div>
-                <div class="control">
-                    <div class="button" id="play-pause-button">
-                        <i class="fa fa-play"></i>
-                    </div>
-                </div>
-                <div class="control">
-                    <div class="button" id="play-next">
-                        <i class="fa fa-forward"></i>
-                    </div>
-                </div>
-            </div>
+        <div class="bottom-bar--left-col--actions">
+            <button class="bottom-bar--left-col--actions--favorite">
+                <i class='lni lni-heart'></i>
+            </button>
+            <button class="bottom-bar--left-col--actions--pip">
+                <i class="pip-icon"></i>
+            </button>
         </div>
     </div>
 </div>

@@ -1,14 +1,43 @@
 <header>
     <div id="topbar">
-        <div id="search">
-            <input id="search-box" type="search" name="search" placeholder="Search for song,artists etc..." />
-            <i id="search-icon" class="fa fa-search"></i>
+        <div class="header w-75 d-flex">
+            <div class="header--buttons">
+                <button class="header--button previous">
+                    <i class="fa fa-angle-left"></i>
+                </button>
+                <button class="header--button next">
+                    <i class="fa fa-angle-right"></i>
+                </button>
+            </div>
+
+            <div id="search" class="ms-5">
+                <input id="search-box" type="search" name="search" placeholder="Search for song,artists etc..." />
+                <i id="search-icon" class="fa fa-search"></i>
+            </div>
         </div>
 
         <div id="right">
             <i class="fa fa-bell"></i>
-            <i id="cog-icon" class="fa fa-cog"></i>
-            <button class="btn">Don't Click here</button>
+            <div class="menu-wrap">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <i id="cog-icon" class="fa fa-cog"></i>
+
+                        <ul class="drop-menu">
+                            <li class="drop-menu-item">
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li class="drop-menu-item">
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li class="drop-menu-item">
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <button class="btnk">Don't Click here</button>
         </div>
     </div>
 </header>

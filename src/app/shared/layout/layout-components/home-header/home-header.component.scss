@@ -1,3 +1,17 @@
+.header--button {
+    background: var(--button-bg);
+    color: #fff;
+    border: 0;
+    border-radius: 50%;
+    height: 28px;
+    width: 26px;
+    cursor: pointer;
+    outline: 0;
+}
+.header--button.previous {
+    margin-right: 10px;
+}
+
 #search {
     position: relative;
     width: 40%;
@@ -9,6 +23,7 @@
     padding-right: 10px;
     font-size: 12px;
     letter-spacing: 0.8px;
+    color: #eee;
     outline: none;
     border: 0;
     border-radius: 24px;
@@ -27,9 +42,10 @@
 
 #cog-icon {
     margin: 0 20px;
+    color: var(--body-color);
 }
 
-.btn {
+.btnk {
     background-color: #0084ff;
     border: none;
     color: white;
@@ -45,17 +61,66 @@
     color: var(--body-color);
     display: flex;
     align-items: center;
-    // i {
-    //     padding: 10px;
-    //     border-radius: 10px;
-    //     background: var(--button-bg);
-    // }
     i:hover {
         color: #fff;
     }
 }
 
 #topbar {
+    padding: 0 8px;
     display: flex;
     justify-content: space-between;
+}
+.menu,
+.drop-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.drop-menu {
+    display: none;
+    position: absolute;
+    list-style: none;
+    right: 0;
+    margin: 10px 0 0 0;
+    padding: 0;
+    width: 160px;
+    background-color: var(--video-bg);
+    border-radius: 5px;
+    box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.5);
+    li {
+        padding-left: 40px;
+        font-size: 0.9rem;
+        border-bottom: 1px solid rgb(64, 64, 64);
+        color: #b3b3b3;
+        user-select: none;
+        height: 40px;
+        line-height: 40px;
+        a{
+            text-decoration: none;
+        }
+    }
+    li:first-child {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    li:last-child {
+        border-bottom: 0;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+.drop-menu-item a {
+    color: #b3b3b3;
+}
+
+.menu-item:hover {
+
+.drop-menu {
+    display: block;
+} 
+#cog-icon{
+        color: #fff;
+    }
 }
