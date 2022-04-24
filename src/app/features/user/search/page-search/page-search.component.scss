@@ -1,11 +1,13 @@
 
 .section {
-    margin-bottom: 35px;
+    // margin-bottom: 35px;
+    margin: 10px 10px 35px 10px;
 }
 
 .title {
-    font-size: 1.75rem;
-    margin-top: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
 }
 
 .section--body {
@@ -47,11 +49,12 @@
     width: 100%;
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
 }
 
 .category--item a h3 {
     margin: 0;
+    font-size: 18px;
+    font-weight: 600;
     padding-top: 16px;
     padding-left: 16px;
 }
@@ -78,5 +81,5 @@
 }
 
 .section--body--item.section--body--item--lg.category--item a h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }

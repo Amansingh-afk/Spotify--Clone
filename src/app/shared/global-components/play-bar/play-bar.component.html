@@ -1,28 +1,52 @@
-<div class="bottom-bar">
-    <div class="bottom-bar--left-col">
-        <div class="bottom-bar--left-col--song">
-            <div class="bottom-bar--left-col--song--img">
-                <div class="bottom-bar--left-col--song--img--pull-up">
-                    <i class='fa fa-angle-up'></i>
-                </div>
-                <img src="http://via.placeholder.com/150x150" alt="">
-            </div>
-            <div class="bottom-bar--left-col--song--details">
-                <div class="bottom-bar--left-col--song--details--wrapper">
-                    <a href="#" class="bottom-bar--left-col--song--details--title">Song Title</a>
-                </div>
-                <div class="bottom-bar--left-col--song--details--wrapper">
-                    <a href="#" class="bottom-bar--left-col--song--details--artist">Artist</a>
+<div class="playbar">
+    <div class="album-cover">
+        <div class="album-cover__img"></div>
+        <div class="album-cover__text-box">
+            <div class="album-cover__wrap">
+                <p class="album-cover__title">Morning Sun</p>
+                <div class="album-cover__icon-box">
+                    <i class="album-cover__icon fa fa-heart"></i>
+                    <i class="album-cover__icon fa fa-ban"></i>
                 </div>
             </div>
+            <div>
+                <p class="album-cover__artist">Emile Almira, Lizzie Statham</p>
+            </div>
         </div>
-        <div class="bottom-bar--left-col--actions">
-            <button class="bottom-bar--left-col--actions--favorite">
-                <i class='fa fa-heart'></i>
-            </button>
-            <button class="bottom-bar--left-col--actions--pip">
-                <i class="pip-icon"></i>
-            </button>
-        </div>
+    </div>
+    <div class="play-btns">
+        <ul class="play-btns__wrap play-btns__icon-box">
+            <li class="play-btns__list"><i class="play-btns__icon fa fa-random"></i></li>
+            <li class="play-btns__list"><i class="play-btns__icon fa fa-step-backward"></i></li>
+            <li class="play-btns__list"><i class="play-btns__icon fa fa-play-circle"></i></li>
+            <li class="play-btns__list"><i class="play-btns__icon fa fa-step-forward"></i></li>
+            <li class="play-btns__list"><i class="play-btns__icon fa fa-rotate-left"></i></li>
+        </ul>
+        <ul class="play-btns__wrap play-btns__range-bar">
+            <li>
+                <p>2:03</p>
+            </li>
+            <li class="play-btns__bar">
+                <div>
+                    <input type="range" value="60" min="0" max="100">
+                </div>
+            </li>
+            <li>
+                <p>3:52</p>
+            </li>
+        </ul>
+    </div>
+    <div class="ect-btns">
+        <ul class="ect-btns__inner">
+            <li class="ect-btns__list"><i class="ect-btns__icon fa fa-list"></i></li>
+            <li class="ect-btns__list"><i class="ect-btns__icon fa fa-mobile-alt"></i></li>
+            <li class="ect-btns__list ect-btns__list--volume">
+                <i class="ect-btns__icon fa fa-volume-up"></i>
+                <div class="ect-btns__bar">
+                    <input type="range" value="100" min="0" max="100">
+                </div>
+            </li>
+            <li class="ect-btns__list"><i class="ect-btns__icon fa fa-expand-alt"></i></li>
+        </ul>
     </div>
 </div>
