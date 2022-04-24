@@ -13,29 +13,15 @@ $main-color: #1ED761;
 
 
 
-body{
-	width: 100%;height: 100%;
-	color: #b3b3b3;
-	font: 400 14px 'Roboto', sans-serif;
-	letter-spacing: 0.4px;
-	vertical-align: middle;
-	cursor: default;
-	overflow-x:hidden;
-}
-
-
-
-//scroll bar
-::-webkit-scrollbar{
-	width: 8px;	
-}
-::-webkit-scrollbar-track{
-	background:transparent;
-}
-::-webkit-scrollbar-thumb{
-	background:#535353;
-	border-radius:5px;
-}
+// body{
+// 	width: 100%;height: 100%;
+// 	color: #b3b3b3;
+// 	font: 400 14px 'Roboto', sans-serif;
+// 	letter-spacing: 0.4px;
+// 	vertical-align: middle;
+// 	cursor: default;
+// 	overflow-x:hidden;
+// }
 
 //range slider
 input[type="range"] {
@@ -80,123 +66,14 @@ input[type=range]:hover::-webkit-slider-thumb {
 ul{
     list-style: none;
 }
-
-//sidemenu - nav: Top box
-.side{
-	position: relative;
-	width: 240px;
-	min-width: 200px;
-	height: 100%;
-	background-color: #121212;
-    
-    &__wrap{
-			box-sizing: border-box;
-			padding: 0 20px;
-    }
-    &__nav{
-			height: 200px;
-
-        .nav{
-					padding-top: 64px;
-            
-            &__list{
-							padding: 9px 0;
-        
-                &:hover{
-                    .nav__icon,
-                    .nav__text{
-											color: #fff;
-                    }
-                }
-            }
-            &__icon{
-                width: 30px;
-                text-align: center;
-                font-size: 22px;
-                float:left;
-            }
-            &__text{
-                display: inline-block;
-                padding-left: 12px;
-                line-height: 22px;
-            }
-        }
-    }
-    //sidemenu - list: Middle box
-    &__contents{
-        height: calc(100% - 266px);
-        overflow-Y: scroll;
-
-        .contents{
-            margin-bottom:26px;
-
-            &__title{
-                font-size:11px;
-                color: #898989;
-                padding: 0;
-                letter-spacing: 1.6px;
-            }
-            &__box{
-                margin-top:-10px;
-            }
-            &__list{
-                position: relative;
-                padding: 8px 0;
-
-                &.on{
-                    color: #fff;
-
-                    &::before{
-                        display: block;
-                        content: '';
-                        width: 5px;
-                        height: 18px;
-                        position: absolute;
-                        left: -20px;
-                        background-color:#1ED761;
-                    }
-                }
-                &:hover{
-                    color:#fff;
-                }
-            }
-        }
-    }
-    //sidemenu - new list: Bottom box
-    &__new-list{
-        height: 66px;
-        border-top:1px solid rgba(255,255,255,0.1);
-
-        .new-list{
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-
-            &__icon{
-                font-size: 26px;
-                transform: rotate(45deg);
-                float:left;
-            }
-            &__text{
-                display: inline-block;
-                margin-left: 10px;
-                line-height: 26px;
-            }
-            &:hover{
-                color: #fff;
-            }
-        }
-    }
-}
-
 /*==================================================================*/
 // main (current play list) area
 .main{
-	position: relative;
+	// position: relative;
 	width: 100%;
 	min-width: 638px;
 	height: 100%;
-	background-color: #181818; 
+	background-color: var(--theme-bg); 
 	float: right;
 	overflow-y: scroll;
 
@@ -213,65 +90,17 @@ ul{
 	height: 120px;
 	position: fixed;
 	top: 0%; 
-	background: rgb(0,0,0);
+	background: var(--theme-bg);
 	background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 200%);
 	z-index: 1;
-}
-.top-bar{
-	position: fixed;
-	width: calc(100% - 248px);
-	height: 40px;
-	margin: auto;
-	padding: 10px 20px;
-	@include flex-justify-btw;
-	color: #ddd;
-	line-height: 24px; 
-	z-index: 20;
-
-    &__wrap{
-        @include flex-justify-btw;
-    }
-    &__icon{
-        font-size: 18px;
-    }
-    &__left{
-        width: 240px;
-    }
-    &__search{
-        position: relative;
-
-        &--icon{
-            @include position(absolute, 5px, 8px);
-            color: #292929;
-            font-size:16px;
-        }
-        &--input{
-            width: 176px;
-            height: 24px;
-            line-height:24px;
-            text-indent: 30px;
-            border-radius: 13px;
-            outline: none;
-            border:none;
-        }
-    }
-    &__right{
-        width: 110px;
-
-        &--user-icon{
-            position: relative;
-            left: 12px;
-            font-size: 24px;
-        }
-    }
 }
 // play list - summary area 
 .summary{
 	height: 306px;
 	display: flex;
 	padding-top: 70px;
-	background: rgb(24,24,24);
-	background: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(64,64,64,1) 100%);
+	background: var(--theme-bg);
+	background: linear-gradient(0deg, var(--theme-bg) 0%, rgba(64,64,64,1) 100%);
     
     &__img{
         min-width: 222px;
@@ -311,8 +140,9 @@ ul{
             color:#fff;
 
             &__list{
-                width: 32px;
+                width: 36px;
                 height: 32px;
+                margin-right: 10px;
                 position: relative;
                 border-radius: 50%;
                 border:1px solid #B3B3B3;
@@ -414,6 +244,7 @@ ul{
     width: 100%;
     color:#fff;
     border-collapse: collapse;
+    // background-color: var(--theme-bg);
     
     &__th{
         padding: 6px 0 6px 10px;
@@ -489,124 +320,6 @@ ul{
         &--more{
             color: #b3b3b3;
         }
-    }
-}
-.playbar{
-	display: flex;
-	width: 100%; 
-	height: 86px;
-	padding: 18px 16px 12px;
-	background-color: #282828; 
-	box-sizing: border-box;
-}
-// playbar - album cover and info
-.album-cover{
-    min-width: 280px;
-	display: flex;
-    flex:1;
-    
-    &__img{
-        width: 56px;
-        height: 56px;
-        background: url(https://i.scdn.co/image/ab67616d00001e02a00bcbae89bf421636fdd310);
-        background-size: cover;
-    }
-    &__text-box{
-        padding: 0 10px;
-    }
-    &__wrap{
-        display: flex;
-        line-height:2.4;
-    }
-    &__title{
-        color:#fff;
-
-        &:hover{
-            text-decoration: underline;
-        }
-    }
-    &__icon-box{
-        margin-left:20px;
-    }
-    &__icons{
-        margin:-2px 0 0 4px;
-    }
-    &__artist{
-        font-size: 11px;
-
-        &:hover{
-            color: #fff;
-            text-decoration: underline;
-        }
-    }
-}
-// playbar - play buttons 
-.play-btns{
-	width: 100%;
-	min-width: 342px;
-	flex:3;
-    
-    &__wrap{
-        @include flex-justify-btw;
-    }
-    &__icon-box{
-        width: 218px;
-        margin: auto;
-        font-size: 14px;
-        line-height: 32px;
-    }
-    &__list:hover{
-        color: #fff;
-
-        .fa-play-circle{
-            color: #fff;
-            transform: scale(1.05);
-        }
-    }
-    &__icon.fa-play-circle{
-        color: #e5e5e5;
-        font-size: 32px;
-    }
-    &__range-bar{
-        width: 84%;
-        margin: auto;
-        font-size: 11px;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-    &__bar{
-        flex: 2;
-        padding: 0 20px;
-    }
-}
-// playbar - other buttons(right side) 
-.ect-btns{
-	max-width: 228px;
-	min-width: 228px;
-	flex:1;
-	font-size: 14px;
-    
-    &__inner{
-        @include flex-justify-btw;
-        padding-left: 18px;
-    }
-    &__list{
-        line-height: 56px;
-
-        &:hover .ect-btns__icon{
-            color: #fff;
-        }
-        &--volume{
-            display: flex;
-        }
-    }
-    &__icon{
-        padding-right: 6px;
-        line-height: 56px;
-    }
-    &__bar{
-        width: 74px;
-        margin-top: -3px;
     }
 }
 
