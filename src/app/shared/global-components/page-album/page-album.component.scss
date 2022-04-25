@@ -10,19 +10,6 @@ $main-color: #1ED761;
 	display: flex;
 	justify-content:space-between;
 }
-
-
-
-// body{
-// 	width: 100%;height: 100%;
-// 	color: #b3b3b3;
-// 	font: 400 14px 'Roboto', sans-serif;
-// 	letter-spacing: 0.4px;
-// 	vertical-align: middle;
-// 	cursor: default;
-// 	overflow-x:hidden;
-// }
-
 //range slider
 input[type="range"] {
 	width: 100%;
@@ -69,7 +56,7 @@ ul{
 /*==================================================================*/
 // main (current play list) area
 .main{
-	// position: relative;
+	position: relative;
 	width: 100%;
 	min-width: 638px;
 	height: 100%;
