@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageHomeLayoutComponent } from 'src/app/shared/layout/layout-structures/page-home-layout/page-home-layout.component';
 import { PageSearchLayoutComponent } from 'src/app/shared/layout/layout-structures/page-search-layout/page-search-layout.component';
 import { PageLibraryLayoutComponent } from 'src/app/shared/layout/layout-structures/page-library-layout/page-library-layout.component'
-import { AlbumComponent } from './album/album.component';
+import { PageAlbumLayoutComponent } from 'src/app/shared/layout/layout-structures/page-album-layout/page-album-layout.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -33,8 +34,14 @@ const routes: Routes = [
       }
     ]
   },
-  { 
-    path: 'album', component: AlbumComponent 
+  {
+    path: '',
+    component: PageAlbumLayoutComponent,
+    children: [
+      {
+        path: 'album', loadChildren: () => import('./album/album.module').then(m => m.AlbumModule)
+      }
+    ]
   }
 ];
 

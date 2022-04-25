@@ -1,8 +1,8 @@
 <div class="wrap">
     <div class="list-area">
-        <div class="main">
-            <!-- <div class="main__wrap top-scroll-bg"></div> -->
-            <div class="main__wrap summary">
+        <div class="main"  (scroll)="onScroll($event)">
+            <div class="main__wrap top-scroll-bg" [ngStyle]="{'background': bgColor}" ></div>
+            <div class="main__wrap summary" >
                 <div class="summary__img"></div>
                 <div class="summary__box">
                     <div class="summary__text">
@@ -35,9 +35,9 @@
                     </div>
                 </div>
             </div>
-            <div class="main__wrap summary on">
-                <div class="summary__img"></div>
-                <div class="summary__box">
+            <div class="main__wrap" [ngClass]="{'on summary': fixed }">
+                <div class="summary__img" [ngClass]="{'fuck': !fixed }"></div>
+                <div class="summary__box" [ngClass]="{'fuck': !fixed }">
                     <div class="summary__text">
                         <ul>
                             <li>

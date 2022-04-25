@@ -74,11 +74,11 @@ ul{
 	display:block;
 	width: 100%;
 	min-width: 638px;
-	height: 120px;
+	height: 100px;
 	position: fixed;
 	top: 0%; 
 	background: var(--theme-bg);
-	background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 200%);
+	background: linear-gradient(0deg, rgba(0,0,0,0) 0%, var(--theme-bg) 200%);
 	z-index: 1;
 }
 // play list - summary area 
@@ -92,7 +92,7 @@ ul{
     &__img{
         min-width: 222px;
         height: 222px;
-        background: url(https://www.dittomusic.com/img/blog_uploads/2018/8/how-to-get-on-spotify-discover-weekly-release-radar_medium_5b7a9933c857e.jpg) no-repeat;
+        background: url(/assets/image/hindi-party/bollywood-rock.jpeg) no-repeat;
         background-size: cover;
     }
     // play list - summary area: text box
@@ -167,16 +167,16 @@ ul{
     &.on{ 
         width: calc(100% - 248px);
         min-width: 638px;
-        height: 60px;	
+        height: 80px;	
         position: fixed;
-        top: 60px;
+        top: 20px;
         padding-top: 5px; 
         border-bottom:1px solid rgba(255,255,255,0.2);
         background: transparent;
         z-index: 30;
-        overflow: hidden;
+        // overflow: hidden;
         
-        display: none;
+        // display: none;
 
         .summary{
             &__img{
@@ -468,4 +468,7 @@ ul{
         display: none;
         }
     }  
+  }
+  .fuck{
+      display: none;
   }

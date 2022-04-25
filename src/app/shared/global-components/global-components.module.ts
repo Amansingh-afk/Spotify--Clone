@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { PageErrorComponent } from './page-error/page-error.component';
 import { MusicCardComponent } from './music-card/music-card.component';
 import { PlayBarComponent } from './play-bar/play-bar.component';
-import { PageAlbumComponent } from './page-album/page-album.component';
+import { PagePlaylistComponent } from './page-playlist/page-playlist.component';
 
 
 
@@ -13,7 +13,7 @@ import { PageAlbumComponent } from './page-album/page-album.component';
     PageErrorComponent,
     MusicCardComponent,
     PlayBarComponent,
-    PageAlbumComponent
+    PagePlaylistComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +23,7 @@ import { PageAlbumComponent } from './page-album/page-album.component';
     PageErrorComponent,
     MusicCardComponent,
     PlayBarComponent,
-    PageAlbumComponent
+    PagePlaylistComponent
   ]
 })
 export class GlobalComponentsModule { }

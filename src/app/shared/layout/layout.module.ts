@@ -10,6 +10,7 @@ import { LibraryHeaderComponent } from './layout-components/library-header/libra
 import { PageHomeLayoutComponent } from './layout-structures/page-home-layout/page-home-layout.component';
 import { PageSearchLayoutComponent } from './layout-structures/page-search-layout/page-search-layout.component';
 import { PageLibraryLayoutComponent } from './layout-structures/page-library-layout/page-library-layout.component';
+import { PageAlbumLayoutComponent } from './layout-structures/page-album-layout/page-album-layout.component';
 
 
 
@@ -21,7 +22,8 @@ import { PageLibraryLayoutComponent } from './layout-structures/page-library-lay
     LibraryHeaderComponent,
     PageHomeLayoutComponent,
     PageSearchLayoutComponent,
-    PageLibraryLayoutComponent
+    PageLibraryLayoutComponent,
+    PageAlbumLayoutComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,9 @@ import { PageLibraryLayoutComponent } from './layout-structures/page-library-lay
   exports: [
     PageHomeLayoutComponent,
     PageSearchLayoutComponent,
-    PageLibraryLayoutComponent
+    PageLibraryLayoutComponent,
+    PageAlbumLayoutComponent
+
   ]
 })
 export class LayoutModule { }
