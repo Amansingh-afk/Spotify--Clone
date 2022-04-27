@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class SearchArtistItemComponent implements OnInit {
   @Input() artist: any;
-
+  @Input() it !: number;
   constructor(private router: Router) { /*empty*/ }
 
   ngOnInit(): void { /*empty*/ }
@@ -16,6 +16,6 @@ export class SearchArtistItemComponent implements OnInit {
   // navigates to artist
   public navigate(artist: any): void {
     console.log('id', artist.id);
-    this.router.navigate(['/artist', artist.id]);
+    this.router.navigate(['user/album', artist.id]);
   }
 }

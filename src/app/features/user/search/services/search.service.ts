@@ -17,7 +17,7 @@ export class SearchService {
   public getTracksAndArtists(term: string): Observable<APISearch[]> {
     const searchUrl: string = `search?q=${ term }&type=track%2Cartist`;
 
-    return this.globalService.getQuery(searchUrl).pipe(
+    return this.globalService.getSearchQuery(searchUrl).pipe(
       map((res: APISearch[]) => {
         if (!res) {
           throw new Error('Value expected!');

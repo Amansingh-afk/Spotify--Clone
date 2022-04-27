@@ -16,7 +16,7 @@ export class PageSearchComponent implements OnInit {
   public moreArtists: boolean = false;
   public moreTracks: boolean = false;
   // public activeLanguage: string = 'en';
-  num : number | any = 10;
+  numRows !: 5;
   
   constructor( private searchService: SearchService, private router: Router ) { /*empty*/ }
 

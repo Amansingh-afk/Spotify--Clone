@@ -1,13 +1,30 @@
 <div class=" home_container">
-    <app-home-banner></app-home-banner>
+    <!-- <app-home-banner></app-home-banner> -->
 
     <!-- <app-recently-played></app-recently-played> -->
-    <app-recommended></app-recommended>
+    <!-- <app-recommended></app-recommended> -->
 
-    <app-hindi-party></app-hindi-party>
+    <!-- <app-hindi-party></app-hindi-party> -->
 
-    <app-todays-hit></app-todays-hit>
+    <!-- <app-todays-hit></app-todays-hit> -->
 
-    <app-new-music></app-new-music>
-    <app-popular-album></app-popular-album>
+    <!-- <app-new-music></app-new-music> -->
+    <!-- <app-popular-album></app-popular-album> -->
+    <div id="newReleasesId" class="new-releases">
+        <h2 class="new-releases__title ms-2">New Releases</h2>
+        <section class="new-releases__new-releases-section" *ngIf="newReleases.length > 0">
+            <div class="container m-0 p-0">
+                <div class="row">
+            <app-new-release-item
+            [newRelease]="newRelease" class="col-2"
+            *ngFor="let newRelease of newReleases; let i = index" [it]="i"
+            ></app-new-release-item> </div></div>
+            <div class="new-releases__float-btn-container">
+                <a class="float-btn" (click)="scrollTo('newReleasesId')">
+                  <span class="fas fa-chevron-up float-btn-icon"></span>
+                </a>
+            </div>  
+        </section>
+    </div>
+    
 </div>

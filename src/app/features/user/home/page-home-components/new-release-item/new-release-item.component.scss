@@ -21,42 +21,28 @@ $black: black;
 }
 
 // SCSS Styles
-.search-track-item {    
-    padding: 10px;
+.new-release-item {
+    max-width: 90%;
+    margin: 0 auto;
     margin-bottom: 20px;
+    padding: 10px;
     border-radius: 10px;
 
     background-color: $dark-gray;
 
     @include desktop {
-      width: 166px;
-      height: 240px;
-      margin-right: 15px;
+      width: 270px;
+      height: 300px;
 
       cursor: pointer;
     }
 
-    &__img-container {
-      text-align: center;
-    }
-
     &__img {
-        width: 120px;
-    }   
-
-    &__title-container {
-      padding-left: 20px;
-      
-      @include desktop {
-        padding-left: 8px;
-        padding-right: 8px;
-      }
+        width: 150px;
     }
-    
-    &__title {
-      margin-top: 20px;
-      margin-bottom: 15px;
 
+    &__title {
+      margin-bottom: 20px;
       font-size: 18px;
 
       @include desktop {
@@ -70,15 +56,29 @@ $black: black;
       justify-content: flex-start;
 
       align-items: baseline;
+    }
+
+    &__artist {
+      margin-right: 5px;
 
       @include desktop {
-        padding-left: 8px;
-        padding-right: 8px;
+        font-size: 11px;
       }
     }
 
-    &__track {
-      margin-right: 5px;
+    &__type-container {
+      margin-left: 20px;
+      border-radius: 20px;
+
+      background-color: #181818;
+    }
+
+    &__type {
+      margin: 0px;
+      padding: 5px 10px 5px 10px;
+
+      letter-spacing: 2px;
+      font-weight: 500;
 
       @include desktop {
         font-size: 11px;

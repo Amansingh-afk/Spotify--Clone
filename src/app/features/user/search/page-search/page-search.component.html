@@ -92,18 +92,23 @@
 
 <section class="search-section">
     <div class="search-section__search-item-container">
-        <div class="search-section__artists-container"
+        <div class="search-section__artists-container mt-3"
             [ngClass]="moreArtists ? 'show' : 'search-section__artists-container--hide'" *ngIf="artistsList.length > 0">
-            <div class="search-section__title-container">
-                <h2 class="search-section__title">{{ "search.artist-title" }}</h2>
+            <div id="sub-header" class=" m-0">
+                <h3 class="search-section__title ms-1">Artist</h3>
+                <div class="d-flex">
+                    <span class="me-2">
+                        <p> SEE ALL</p>
+                    </span>
+                </div>
             </div>
-            <button class="btn-template search-section__btn" 
-                (click)="seeMoreArtists()">{{ "search.more-btn"}}
-            </button>
-            <div class="search-section__search-item container">
-                <div class="row">
-                    <app-search-artist-item class="col-2 m-2" 
-                        [artist]="artist" *ngFor="let artist of artistsList">
+            <!-- <button class="btn-template search-section__btn" 
+                (click)="seeMoreArtists()">{{ "search.more-btn"}} 
+            </button> -->
+            <div class="container p-0">
+                <div class="row ">
+                    <app-search-artist-item class="col-2 " [artist]="artist"
+                        *ngFor="let artist of artistsList; let i = index" [it]="i">
                     </app-search-artist-item>
                 </div>
             </div>
@@ -111,12 +116,19 @@
         <div class="search-section__tracks-container"
             [ngClass]="moreTracks ? 'show' : 'search-section__tracks-container--hide'" *ngIf="tracksList.length > 0">
             <div class="search-section__title-container">
-                <h2 class="search-section__title">{{ "search.tracks-title"}}</h2>
+                <div id="sub-header" class=" m-0">
+                    <h3 class="search-section__title ms-1">Songs</h3>
+                    <div class="d-flex">
+                        <span class="me-2">
+                            <p> SEE ALL</p>
+                        </span>
+                    </div>
+                </div>
             </div>
-            <button class="btn-template search-section__btn" (click)="seeMoreTracks()">{{ "search.more-btn"}}</button>
-            <div class="search-section__search-item container">
+            <!-- <button class="btn-template search-section__btn" (click)="seeMoreTracks()">{{ "search.more-btn"}}</button> -->
+            <div class="search-section__search-item container p-0">
                 <div class="row">
-                    <app-search-track-item class="col-2" [track]="track" *ngFor="let track of tracksList">
+                    <app-search-track-item class="col-2" [track]="track" *ngFor="let track of tracksList; let iter = index" [it]="iter">
                     </app-search-track-item>
                 </div>
             </div>

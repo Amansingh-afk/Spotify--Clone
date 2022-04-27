@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { HomeRoutingModule } from './home-routing.module';
 import { PageHomeComponent } from './page-home/page-home.component';
@@ -11,7 +12,11 @@ import { TestComponent } from './page-home-components/test/test.component';
 import { PopularAlbumComponent } from './page-home-components/popular-album/popular-album.component';
 import { NewMusicComponent } from './page-home-components/new-music/new-music.component';
 import { RecommendedComponent } from './page-home-components/recommended/recommended.component';
+import { NewReleaseItemComponent } from './page-home-components/new-release-item/new-release-item.component';
 
+// Services
+import { NewReleasesService } from './services/new-releases.service';
+import { PipesModule } from 'src/app/shared/pipes/pipes.module';
 
 
 @NgModule({
@@ -24,12 +29,18 @@ import { RecommendedComponent } from './page-home-components/recommended/recomme
     TestComponent,
     PopularAlbumComponent,
     NewMusicComponent,
-    RecommendedComponent
+    RecommendedComponent,
+    NewReleaseItemComponent
   ],
   imports: [
     CommonModule, 
     HomeRoutingModule,
-    SharedModule
+    HttpClientModule,
+    SharedModule,
+    PipesModule
+  ],
+  providers: [
+    NewReleasesService,
   ]
 })
 export class HomeModule { }

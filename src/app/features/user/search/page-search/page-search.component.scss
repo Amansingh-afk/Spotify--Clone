@@ -44,7 +44,6 @@
     margin: 0 20px;
     color: var(--body-color);
 }
-
 .btnk {
     background-color: #0084ff;
     border: none;
@@ -126,9 +125,23 @@
         color: #fff;
     }
 }
-.section {
-    // margin-bottom: 35px;
-    margin: 10px 10px 35px 10px;
+
+
+#sub-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h3 {
+        color: #d8d8d8;
+        font-weight: 600;
+        letter-spacing: 0.7px;
+        font-size: 17px;
+    } 
+    p{
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+    }   
 }
 
 .title {

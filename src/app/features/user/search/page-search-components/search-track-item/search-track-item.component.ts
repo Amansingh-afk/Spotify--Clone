@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SearchTrackItemComponent implements OnInit {
   @Input() track: any;
+  @Input() it !: number;
 
   constructor(private router: Router) { /*empty*/ }
 
@@ -16,7 +17,7 @@ export class SearchTrackItemComponent implements OnInit {
   // navigates to album
   public navigate(track: any): void {
     console.log('id', track.album.id);
-    this.router.navigate(['/album', track.album.id]);
+    this.router.navigate(['user/album', track.album.id]);
   }
 
 }

@@ -1,1 +1,22 @@
-<app-page-playlist></app-page-playlist>
+<!-- <app-page-playlist></app-page-playlist> -->
+
+
+
+<div class="album-tracks animated fadeIn" *ngIf="album != null"> 
+    <div class="album-tracks__header">
+        <div class="album-tracks__img-container">
+            <img class="album-tracks__img" [src]="album.images | errorImage" [alt]="album.name">
+        </div>
+        <div class="album-tracks__info-container">
+            <div class="album-tracks__type-container" *ngIf="album.type">
+                <p class="album-tracks__type">{{ album.type | uppercase}}</p>
+            </div>
+            <div class="album-tracks__name-container" *ngIf="album.name">
+                <h1 class="album-tracks__name">{{ album.name }}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="album-tracks__list-container">
+        <iframe [src]="album.uri | uri" width="1000" height="500" frameborsrcder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+</div>

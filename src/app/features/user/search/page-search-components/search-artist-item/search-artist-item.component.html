@@ -14,7 +14,7 @@
         </div>
     </div>    
 </div> -->
-
+<div *ngIf="it < 6">
 <div class="card card_container p-1" *ngIf="artist" (click)="navigate(artist)">
     <!-- <a class="stretched-link" routerLink="/user/album"></a> -->
     <img [src]="artist.images | errorImage" [alt]="artist.name" />
@@ -29,4 +29,4 @@
         <h6 class="card-title my-1">{{ artist.name}}</h6>
         <!-- <p class="card-subtitle ">Card subtitle</p> -->
     </div>
-</div>
+</div> </div>
