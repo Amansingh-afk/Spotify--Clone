@@ -42,6 +42,14 @@ const routes: Routes = [
         path: 'album/:id', loadChildren: () => import('./album/album.module').then(m => m.AlbumModule)
       }
     ]
+  },{
+    path: '',
+    component: PageAlbumLayoutComponent,
+    children: [
+      {
+        path: 'artist/:id', loadChildren: () => import('./artist/artist.module').then(m => m.ArtistModule)
+      }
+    ]
   }
 ];
 

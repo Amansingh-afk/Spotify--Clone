@@ -16,6 +16,6 @@ export class SearchArtistItemComponent implements OnInit {
   // navigates to artist
   public navigate(artist: any): void {
     console.log('id', artist.id);
-    this.router.navigate(['user/album', artist.id]);
+    this.router.navigate(['user/artist', artist.id]);
   }
 }
