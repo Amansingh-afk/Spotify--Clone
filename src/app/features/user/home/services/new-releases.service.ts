@@ -10,7 +10,7 @@ import { GlobalService } from 'src/app/shared/services/global.service';
 
 @Injectable() // service provided in module
 export class NewReleasesService {
-  private newReleasesUrl: string = 'browse/new-releases';
+  private newReleasesUrl: string = 'browse/new-releases?country=IN';
 
   constructor(private globalService: GlobalService) { /*empty*/ }
 

@@ -1,55 +1,34 @@
-.home_container{
-    padding: 10px;
-    background-color: var(--theme-bg);
-    border-radius: 20px;
-    min-height: 100%;
-    // box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-}
-// SCSS Variables
-$layout_bp_mobile: 360px;
-$layout_bp_tablet: 800px;
-$layout_bp_desktop: 1000px;
-
-// $dark-gray: #282828;
-$dark-gray: #181818;
-$light-gray: #b3b3b3;
-$black: black;
-
 // SCSS Mixins
-@mixin tablet {
-  @media only screen and (min-width: $layout_bp_tablet) {
-    @content;
-  }
+// @mixin tablet {
+//   @media only screen and (min-width: $layout_bp_tablet) {
+//     @content;
+//   }
+// }
+
+// @mixin desktop {
+//   @media only screen and (min-width: $layout_bp_desktop) {
+//     @content;
+//   }
+// }
+.home_container {
+  padding: 10px;
+  // background-color: var(--theme-bg);
+  border-radius: 20px;
+  min-height: 100%;
 }
+.new-releases_container {
+  background: transparent;
 
-@mixin desktop {
-  @media only screen and (min-width: $layout_bp_desktop) {
-    @content;
+  .title {
+    color: #d8d8d8;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    font-size: 17px;
   }
-}
 
-// SCSS Styles
-.new-releases {
-    background: transparent;
-
-    &__title {
-        margin-top: 0px;
-        padding-top: 20px;
-        // padding-left: 18.750px;
-
-        @include desktop {
-            width: 500px;
-            // margin-left: 5%;
-        }
-    }
-
-    &__new-releases-section {
-      @include desktop {
-        margin: 0 auto;
-        // max-width: 90%;
-        padding-bottom: 60px;
-        display: flex;
-        flex-wrap: wrap;
-      }
-    }
+  .Container_section {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

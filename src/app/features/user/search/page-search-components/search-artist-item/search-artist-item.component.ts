@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./search-artist-item.component.scss']
 })
 export class SearchArtistItemComponent implements OnInit {
-  @Input() artist: any;
+  @Input() artist : any;
+  @Input() moreArtists !: boolean;
   @Input() it !: number;
   constructor(private router: Router) { /*empty*/ }
 

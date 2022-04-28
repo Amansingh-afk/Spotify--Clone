@@ -1,4 +1,3 @@
-
 export interface APIArtistAlbums {
     href: string;
     items: AlbumItem[];

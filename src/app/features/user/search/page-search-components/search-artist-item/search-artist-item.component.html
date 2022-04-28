@@ -1,32 +1,14 @@
-<!-- <div class="search-artist-item animated fadeIn" *ngIf="artist" (click)="navigate(artist)">  
-    <div class="search-artist-item__img-container">
-        <img class="search-artist-item__img" [src]="artist.images | errorImage" [alt]="artist.name">
-    </div>
-    <div class="search-artist-item__title-container">
-        <h4 class="search-artist-item__title">{{ artist.name }}</h4>
-    </div>
-    <div class="search-artist-item__bottom-container">
-        <div class="search-artist-item__artists-container" *ngFor="let artist of artist.artists">
-            <span class="search-artist-item__artist">{{ artist.name }}</span>
+<div *ngIf="moreArtists ? it < 19 : it < 4">
+    <div class="card" *ngIf="artist" (click)="navigate(artist)">
+        <div class="cover artist">
+            <img [src]="artist.images | errorImage" [alt]="artist.name" />
+            <div class="play-icon">
+                <i class="fa fa-play"></i>
+            </div>
         </div>
-        <div class="search-artist-item__type-container">
-            <span class="search-artist-item__type">{{ artist.type | uppercase }}</span>
+        <div class="card-content">
+            <h4><a>{{artist.name}}</a></h4>
+            <p>{{artist.type | titlecase}}</p>
         </div>
-    </div>    
-</div> -->
-<div *ngIf="it < 6">
-<div class="card card_container p-1" *ngIf="artist" (click)="navigate(artist)">
-    <!-- <a class="stretched-link" routerLink="/user/album"></a> -->
-    <img [src]="artist.images | errorImage" [alt]="artist.name" />
-    <button type="button" class="play_btn animate__animated animate__fadeInUp animate__delay-1 animate__faster">
-        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
-            preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
-            <path fill="currentColor"
-                d="M12.225 4.462C9.89 3.142 7 4.827 7 7.508V24.5c0 2.682 2.892 4.367 5.226 3.045l14.997-8.498c2.367-1.341 2.366-4.751 0-6.091L12.224 4.462Z" />
-        </svg>
-    </button>
-    <div class="card-body p-0 mt-2">
-        <h6 class="card-title my-1">{{ artist.name}}</h6>
-        <!-- <p class="card-subtitle ">Card subtitle</p> -->
     </div>
-</div> </div>
+</div>

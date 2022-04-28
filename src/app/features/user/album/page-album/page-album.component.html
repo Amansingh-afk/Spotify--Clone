@@ -1,7 +1,3 @@
-<!-- <app-page-playlist></app-page-playlist> -->
-
-
-
 <div class="album-tracks animated fadeIn" *ngIf="album != null"> 
     <div class="album-tracks__header">
         <div class="album-tracks__img-container">
@@ -17,6 +13,6 @@
         </div>
     </div>
     <div class="album-tracks__list-container">
-        <iframe [src]="album.uri | uri" width="1000" height="500" frameborsrcder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe [src]="album.uri | uri" width="100%" height="800" frameborsrcder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
 </div>

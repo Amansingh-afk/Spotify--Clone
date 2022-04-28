@@ -1,21 +1,3 @@
-<!-- <div class="new-release-item animated fadeIn" *ngIf="newRelease" (click)="navigate(newRelease)">
-    <div class="new-release-item__img-container">
-        <img class="new-release-item__img" [src]="newRelease.images | errorImage" alt="newRelease.name" >
-    </div>
-    <div class="new-release-item__title-container">
-        <h4 class="new-release-item__title">{{ newRelease.name | uppercase}}</h4>
-    </div>
-    <div class="new-release-item__bottom-container">
-        <div class="new-release-item__artists-container" *ngFor="let artist of newRelease.artists">
-            <span class="new-release-item__artist">{{ artist.name }}</span>
-        </div>
-        <div class="new-release-item__type-container">
-            <p class="new-release-item__type">{{ newRelease.type | uppercase }}</p>
-        </div>
-    </div>    
-</div> -->
-
-
 <div *ngIf="it < 6">
     <div class="card card_container p-1" *ngIf="newRelease" (click)="navigate(newRelease)">
         <!-- <a class="stretched-link" routerLink="/user/album"></a> -->
@@ -28,8 +10,8 @@
             </svg>
         </button>
         <div class="card-body p-0 mt-2">
-            <h6 class="card-title my-1">{{ newRelease.name | uppercase}}</h6>
+            <h6 class="card-title my-1">{{ newRelease.name}}</h6>
             <!-- <p class="card-subtitle ">Card subtitle</p> -->
         </div>
     </div>
- </div>
+</div>

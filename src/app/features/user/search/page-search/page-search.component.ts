@@ -50,6 +50,7 @@ export class PageSearchComponent implements OnInit {
   // update variable to see more/less artists
   public seeMoreArtists(): void {
     this.moreArtists = !this.moreArtists;
+    // alert('duh')
   }
 
   // update variable to see more/less tracks

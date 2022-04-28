@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { GlobalComponentsModule } from 'src/app/shared/global-components/global-components.module';
 import { HomeRoutingModule } from './home-routing.module';
 import { PageHomeComponent } from './page-home/page-home.component';
 import { RecentlyPlayedComponent } from './page-home-components/recently-played/recently-played.component';
@@ -33,10 +34,11 @@ import { PipesModule } from 'src/app/shared/pipes/pipes.module';
     NewReleaseItemComponent
   ],
   imports: [
-    CommonModule, 
+    CommonModule,
     HomeRoutingModule,
     HttpClientModule,
     SharedModule,
+    GlobalComponentsModule,
     PipesModule
   ],
   providers: [

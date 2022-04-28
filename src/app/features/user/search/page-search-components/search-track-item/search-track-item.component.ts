@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SearchTrackItemComponent implements OnInit {
   @Input() track: any;
+  @Input() moreTracks !: boolean;
   @Input() it !: number;
 
   constructor(private router: Router) { /*empty*/ }

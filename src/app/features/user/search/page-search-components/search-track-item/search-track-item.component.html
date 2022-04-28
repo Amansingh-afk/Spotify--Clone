@@ -1,30 +1,14 @@
-<!-- <div class="search-track-item animated fadeIn" *ngIf="track" (click)="navigate(track)">  
-    <div class="search-track-item__img-container">
-        <img class="search-track-item__img" [src]="track.album.images | errorImage" [alt]="track.name">
-    </div>
-    <div class="search-track-item__title-container">
-        <h4 class="search-track-item__title">{{ track.name }}</h4>
-    </div>
-    <div class="search-track-item__bottom-container">
-        <div class="search-track-item__tracks-container" *ngFor="let track of track.artists">
-            <span class="search-track-item__track">{{ track.name }}</span>
+<div *ngIf="moreTracks ? it : it < 4">
+    <div class="card" *ngIf="track" (click)="navigate(track)">
+        <div class="cover">
+            <img [src]="track.album.images | errorImage" [alt]="track.name" />
+            <div class="play-icon">
+                <i class="fa fa-play"></i>
+            </div>
         </div>
-    </div>    
-</div> -->
-
-<div *ngIf="it < 6">
-    <div class="card card_container p-1" *ngIf="track" (click)="navigate(track)">
-        <!-- <a class="stretched-link" routerLink="/user/album"></a> -->
-        <img [src]="track.album.images | errorImage" [alt]="track.name" />
-        <button type="button" class="play_btn animate__animated animate__fadeInUp animate__delay-1 animate__faster">
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
-                preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
-                <path fill="currentColor"
-                    d="M12.225 4.462C9.89 3.142 7 4.827 7 7.508V24.5c0 2.682 2.892 4.367 5.226 3.045l14.997-8.498c2.367-1.341 2.366-4.751 0-6.091L12.224 4.462Z" />
-            </svg>
-        </button>
-        <div class="card-body p-0 mt-2">
-            <h6 class="card-title my-1">{{ track.name}}</h6>
-            <!-- <p class="card-subtitle ">Card subtitle</p> -->
+        <div class="card-content">
+            <h4><a>{{track.name}}</a></h4>
+            <p>{{track.album.name}}</p>
         </div>
-    </div> </div>
+    </div>
+</div>
