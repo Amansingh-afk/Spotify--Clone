@@ -90,6 +90,12 @@ main {
     letter-spacing: 1.5px;
     color: #B3B3B3;
 }
+.sidebar{
+    .menu--item:hover{
+        background-color: #303030;
+        border-radius: 4px;
+    }
+}
 
 .sidebar .separator {
     height: 1px;
@@ -121,10 +127,6 @@ main {
 .sidebar .menu .menu--item a,
 .sidebar .sidebar--download-app a {
     color: #B3B3B3;
-    /*
-        All changes will take 350ms to finish. 
-        Read More: https://css-tricks.com/almanac/properties/t/transition/
-    */
     transition: all 350ms;
 }
 /* When the user hovers -> change the color */
