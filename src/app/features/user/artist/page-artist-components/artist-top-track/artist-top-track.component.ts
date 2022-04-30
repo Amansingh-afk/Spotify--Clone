@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ArtistTopTrackComponent implements OnInit {
   @Input() topTrack: any;
+  @Input() id !: number;
   public play: boolean = false;
 
   constructor() { /*empty*/ }

@@ -8,12 +8,13 @@ import { Router } from '@angular/router';
 })
 export class ArtistAlbumsComponent implements OnInit {
   @Input() album: any;
+  @Input() it !: any;
 
   constructor(private router: Router) { /*empty*/ }
 
   ngOnInit(): void { /*empty*/ }
 
   public seeAlbum(album: any): void {
-    this.router.navigate(['/album', album.id]);
+    this.router.navigate(['user/album', album.id]);
   }
 }

@@ -1,117 +1,145 @@
-.container {
-    background-color: #000;
-    height: 100vh;
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    font-size: 15px;
-    // box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-    position: relative;
-}
-
 .sidebar {
-    height: 100%;
-    padding: 30px 0;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    transition-duration: 0.2s;
-    overflow-y: auto;
-    overflow-x: hidden;
-    .logo {
-        margin: 0 auto;
-        text-align: center;
-        border-bottom: 1px solid var(--border-color);
-        .profile-img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            box-shadow: 0 12px 16px 0 rgb(0, 0, 0, 0.13);
-        }
-        h3 {
-            font-size: 14px;
-            margin: 0;
-            margin-top: 10px;
-            color: #d8d8d8;
-        }
-        p {
-            font-size: 12px;
-            margin: 0;
-        }
-    }
-    .side-wrapper {
-        border-bottom: 1px solid var(--border-color);
-        padding: 20px 0;
-        width: 145px;
-        & + & {
-            border-bottom: none;
-        }
-    }
-    .side-menu {
-        display: flex;
-        flex-direction: column;
-        a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: var(--body-color);
-            & + a {
-                margin-top: 26px;
-            }
-        }
-        svg {
-            width: 30px;
-            padding: 8px;
-            border-radius: 10px;
-            background-color: var(--button-bg);
-            flex-shrink: 0;
-            margin-right: 16px;
-        }
-    }
-    &-link {
-        &:hover,
-         &.active {
-            color: #fff;
-            font-weight: 600;
-            &:nth-child(2n + 1) {
-                svg {
-                    color: #fff;
-                    background: #ff7551;
-                }
-                p{
-                    color: #fff;
-                }
-            }
-            &:nth-child(2n) {
-                svg {
-                    color: #fff;
-                    background: #32a7e2;
-                }
-                p{
-                    color: #fff;
-                }
-            }
-            &:nth-child(2n + 3) {
-                svg {
-                    color: #fff;
-                    background: #6c5ecf;
-                }
-                p{
-                    color: #fff;
-                }
-            }
-        }
-    }
+    background-color: rgba(4, 4, 4);
+    // position: fixed;
+    height: 97vh;
+    width: 100%;
+    overflow: hidden;
 }
 
-@keyframes bottom {
-    0% {
-        transform: translateY(100px);
-        opacity: 0;
-    }
+main {
+    min-height: 100vh;
+    background: dodgerblue;
+}
 
-    100% {
-        opacity: 1;
-        transform: none;
-    }
+.header {
+    position: fixed;
+    top: 0;
+    left: 230px; /* sidebar width */
+    right: 0;
+    height: 80px;
+    background-color: rgb(18, 18, 18);
+}
+.sidebar .brand {
+    padding-bottom: 18px;
+    color: #fff;
+}
+
+.sidebar .brand svg {
+    width: 131px;
+}
+
+.sidebar .menu .menu--item {
+    font-size: 1.5rem;
+    position: relative; /* Needed for the .active state to add the background */
+}
+
+.sidebar .menu.menu-extra .menu--item:not(:first-child) {
+    margin-top: 5px;
+}
+
+.sidebar .menu .menu--item a,
+.sidebar .sidebar--download-app a {
+    text-decoration: none;
+    color: #B3B3B3;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    transition: all 350ms;
+}
+
+.sidebar .menu.menu-extra .menu--item a img {
+    opacity: 0.7;
+    transition: all 350ms;
+}
+
+.sidebar .menu.menu-extra .menu--item:hover a img {
+    opacity: 1;
+}
+
+.sidebar .menu .menu--item.active a,
+.sidebar .menu .menu--item:hover a,
+.sidebar .sidebar--download-app:hover a {
+    color: #fff;
+}
+/* Active state of the menu  item, adds a background color to the element */
+.sidebar .menu .menu--item.active:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 8px;
+    left: -16px; /* -(Sidebar's padding left) + 8px */
+    right: -16px; /* -(Sidebar's padding left) + 8px */
+    background: rgb(40, 40, 40);
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.menu--item--text,
+.sidebar--download-app a span {
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+.sidebar--header {
+    margin-top: 1.5rem;
+    margin-bottom: 1.3rem;
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    color: #B3B3B3;
+}
+
+.sidebar .separator {
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid #303030;
+    margin-top: 16px;
+}
+
+.sidebar .menu.menu-playlist .menu--item--text {
+    font-weight: 400;
+    margin-left: 0;
+    /*
+        Add ellipsis when the text is bigger than the width of the sidebar
+        Read more: https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow
+    */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar .menu.menu-playlist a {
+    cursor: default;
+}
+
+.sidebar--download-app {
+    position: absolute;
+    bottom: 0;
+}
+.sidebar .menu .menu--item a,
+.sidebar .sidebar--download-app a {
+    color: #B3B3B3;
+    /*
+        All changes will take 350ms to finish. 
+        Read More: https://css-tricks.com/almanac/properties/t/transition/
+    */
+    transition: all 350ms;
+}
+/* When the user hovers -> change the color */
+.sidebar .menu .menu--item.active a,
+.sidebar .menu .menu--item:hover a {
+    color: #fff;
+}
+/*
+    Changing the opacity of the image gives the brighter effect. This happens because the background is dark.
+*/
+.sidebar .menu.menu-extra .menu--item a img {
+    opacity: 0.7;
+    transition: all 350ms;
+}
+
+.sidebar .menu.menu-extra .menu--item:hover a img {
+    opacity: 1;
 }

@@ -17,47 +17,21 @@
             <div class="carousel-item active">
                 <div class="container p-0">
                     <div class="row justify-content-around ">
-                        <div class="col-md-2" *ngFor = "let i of cardInfo">
-                            <app-music-card [cardTitle]="i.title" [urlpath]="i.imgurl"></app-music-card>
+                        <div class="col-md-3" *ngFor="let card of cardInfo">
+                            <app-music-card [cardTitle]="card.title" [urlpath]="card.imgurl"></app-music-card>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="container p-0">
-                    <div class="row justify-content-around" >
-                        <div class="col-md-2" *ngFor = "let i of cardInfo2" >
-                            <app-music-card [cardTitle]="i.title" [urlpath]="i.imgurl"></app-music-card>
+                    <div class="row justify-content-around">
+                        <div class="col-md-3" *ngFor="let card of cardInfo2">
+                            <app-music-card [cardTitle]="card.title" [urlpath]="card.imgurl"></app-music-card>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="carousel-item">
-                <div class="container p-0">
-                    <div class="row justify-content-around">
-                        <div class="col-md-2">
-                            <app-music-card></app-music-card>
-                        </div>
-                        <div class="col-md-2">
-                            <app-music-card></app-music-card>
-                        </div>
-                        <div class="col-md-2">
-                            <app-music-card></app-music-card>
-                        </div>
-                        <div class="col-md-2">
-                            <app-music-card></app-music-card>
-                        </div>
-                        <div class="col-md-2">
-                            <app-music-card></app-music-card>
-                        </div>
-                        <div class="col-md-2">
-                            <app-music-card></app-music-card>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
-
     </div>
 </div>

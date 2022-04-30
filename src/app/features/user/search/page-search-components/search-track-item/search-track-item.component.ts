@@ -10,6 +10,7 @@ export class SearchTrackItemComponent implements OnInit {
   @Input() track: any;
   @Input() moreTracks !: boolean;
   @Input() it !: number;
+  play: boolean = false;
 
   constructor(private router: Router) { /*empty*/ }
 
@@ -19,6 +20,10 @@ export class SearchTrackItemComponent implements OnInit {
   public navigate(track: any): void {
     console.log('id', track.album.id);
     this.router.navigate(['user/album', track.album.id]);
+  }
+  public player(): void {
+    this.play = !this.play;
+    console.log('play:', this.play);
   }
 
 }

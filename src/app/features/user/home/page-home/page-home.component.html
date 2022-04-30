@@ -7,19 +7,13 @@
         <section class="container_section" *ngIf="newReleases.length > 0">
             <div class="container m-0 p-0">
                 <div class="row">
-                    <app-new-release-item [newRelease]="newRelease" class="col-2"
+                    <app-new-release-item [newRelease]="newRelease" class="col-md-3"
                         *ngFor="let newRelease of newReleases; let i = index" [it]="i">
                     </app-new-release-item>
                 </div>
             </div>
-            <!-- <div class="new-releases__float-btn-container">
-                <a class="float-btn" (click)="scrollTo('newReleasesId')">
-                    <span class="fas fa-chevron-up float-btn-icon"></span>
-                </a>
-            </div> -->
         </section>
     </div>
-
     <app-hindi-party></app-hindi-party>
     <app-todays-hit></app-todays-hit>
     <app-new-music></app-new-music>

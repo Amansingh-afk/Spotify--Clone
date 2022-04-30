@@ -1,17 +1,15 @@
-<div *ngIf="it < 6">
-    <div class="card card_container p-1" *ngIf="newRelease" (click)="navigate(newRelease)">
-        <!-- <a class="stretched-link" routerLink="/user/album"></a> -->
-        <img [src]="newRelease.images | errorImage" [alt]="newRelease.name" />
-        <button type="button" class="play_btn animate__animated animate__fadeInUp animate__delay-1 animate__faster">
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
-                preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
-                <path fill="currentColor"
-                    d="M12.225 4.462C9.89 3.142 7 4.827 7 7.508V24.5c0 2.682 2.892 4.367 5.226 3.045l14.997-8.498c2.367-1.341 2.366-4.751 0-6.091L12.224 4.462Z" />
-            </svg>
-        </button>
-        <div class="card-body p-0 mt-2">
-            <h6 class="card-title my-1">{{ newRelease.name}}</h6>
-            <!-- <p class="card-subtitle ">Card subtitle</p> -->
+<div *ngIf="it < 4">
+    <div class="card">
+        <div class="cover artist" *ngIf="newRelease" (click)="navigate(newRelease)">
+            <img [src]="newRelease.images | errorImage" [alt]="newRelease.name" />
+            <div class="play-icon">
+                <i class="fa fa-play"></i>
+            </div>
+        </div>
+        <div class="card-content">
+            <h4><a>{{newRelease.name | titlecase}}</a></h4>
+            <!-- <p>{{newRelease.artists | titlecase}}</p> -->
         </div>
     </div>
 </div>
+

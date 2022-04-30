@@ -1,85 +1,191 @@
-.card {
-  // display: inline-block;
-  min-height: 270px;
-  max-height: 270px;
-  // width: 250px;
-  border-radius: 4px;
-  padding: 16px;
-  overflow: hidden;
-  background-color: #181818;
-  transition: background-color 0.4s;
-  cursor: pointer;
-  margin-bottom: 2rem;
-}
-.card:hover {
-  background-color: #282828;
+// .card {
+//   // display: inline-block;
+//   min-height: 270px;
+//   max-height: 270px;
+//   // width: 250px;
+//   border-radius: 4px;
+//   padding: 16px;
+//   overflow: hidden;
+//   background-color: #181818;
+//   transition: background-color 0.4s;
+//   cursor: pointer;
+//   margin-bottom: 2rem;
+// }
+// .card:hover {
+//   background-color: #282828;
+// }
+
+// .cover {
+//   position: relative;
+//   margin-bottom: 18px;
+// }
+// .cover img {
+//   display: block;
+//   width: 100%;
+//   box-shadow: 0 8px 20px -4px hsl(0, 0%, 5%);
+// }
+// .cover.artist img {
+//   border-radius: 50%;
+// }
+
+// .play-icon {
+//   position: absolute;
+//   bottom: -2px;
+//   right: 6px;
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 50%;
+//   color: #fafafa;
+//   background-color: #1db954;
+//   box-shadow: 0 4px 16px -4px #121212;
+//   opacity: 0;
+//   transition: 0.4s, transform 0.1s;
+// }
+// .play-icon:hover {
+//   transform: scale(1.1);
+// }
+// .card:hover .play-icon {
+//   bottom: 6px;
+//   opacity: 1;
+// }
+
+// .fa-play {
+//   position: absolute;
+//   transform: translate(-50%, -50%);
+//   left: 52%;
+//   top: 50%;
+//   font-size: 1rem;
+// }
+
+// .card-content {
+//   font-family: "Montserrat", sans-serif;
+//   color: #fafafa;
+// }
+// .card-content h4 {
+//   margin-bottom: 6px;
+//   a {
+//     font-size: 16px;
+//     text-decoration: none;
+//     color: inherit;
+//   }
+//   a:hover {
+//     text-decoration: underline;
+//   }
+// }
+// .card-content p {
+//   overflow: hidden;
+//   // display: -webkit-box;
+//   // -webkit-line-clamp: 2;
+//   // -webkit-box-orient: vertical;
+//   white-space: nowrap;
+//   text-overflow: ellipsis;
+//   height: 2.5em;
+//   font-size: 13px;
+//   color: hsl(0, 0%, 70%);
+// }
+
+// SCSS Variables
+$layout_bp_mobile: 360px;
+$layout_bp_tablet: 800px;
+$layout_bp_desktop: 1000px;
+
+$dark-gray: #181818;
+$med-gray: #282828;
+$light-gray: #b3b3b3;
+$black: black;
+
+// SCSS Mixins
+@mixin tablet {
+  @media only screen and (min-width: $layout_bp_tablet) {
+    @content;
+  }
 }
 
-.cover {
-  position: relative;
-  margin-bottom: 18px;
-}
-.cover img {
-  display: block;
-  width: 100%;
-  box-shadow: 0 8px 20px -4px hsl(0, 0%, 5%);
-}
-.cover.artist img {
-  border-radius: 50%;
+@mixin desktop {
+  @media only screen and (min-width: $layout_bp_desktop) {
+    @content;
+  }
 }
 
-.play-icon {
-  position: absolute;
-  bottom: -2px;
-  right: 6px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  color: #fafafa;
-  background-color: #1db954;
-  box-shadow: 0 4px 16px -4px #121212;
-  opacity: 0;
-  transition: 0.4s, transform 0.1s;
-}
-.play-icon:hover {
-  transform: scale(1.1);
-}
-.card:hover .play-icon {
-  bottom: 6px;
-  opacity: 1;
-}
-
-.fa-play {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 52%;
-  top: 50%;
-  font-size: 1rem;
-}
-
-.card-content {
-  font-family: "Montserrat", sans-serif;
-  color: #fafafa;
-}
-.card-content h4 {
+// SCSS Styles
+.top-track-item {
   margin-bottom: 6px;
-  a {
+  // display: flex;
+  // flex-direction: row;
+  align-items: center;
+  border-radius: 5px;
+  // justify-content: space-between;
+  .playbtn{
+    display: none;
+    color: #fff;
+  }
+
+  &__left {
+    display: flex;
+    // flex-direction: row;
+    align-items: center;
+  }
+
+  &__player-btn-container {
+    padding-right: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__duration {
+    margin-right: 10px;
+  }
+
+  &__player-btn {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  &__img {
+    padding-top: 5px;
+    padding-left: 5px;
+    width: 50px;
+  }
+
+  &__name-container {
+    margin-left: 15px;
+  }
+
+  &__name {
     font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.015em;
+  }
+
+  &__player-anchor {
+    cursor: pointer;
     text-decoration: none;
-    color: inherit;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    background-color: transparent;
+    padding: 7px 15px;
+    border: 1px solid hsla(0, 0%, 100%, 0.3);
+    box-sizing: border-box;
+    border-radius: 4px;
+    border-color: #fff;
   }
-  a:hover {
-    text-decoration: underline;
+
+  &__player {
+    padding-top: 5px;
+    margin-left: 15px;
   }
 }
-.card-content p {
-  overflow: hidden;
-  // display: -webkit-box;
-  // -webkit-line-clamp: 2;
-  // -webkit-box-orient: vertical;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  height: 2.5em;
-  font-size: 13px;
-  color: hsl(0, 0%, 70%);
+
+.top-track-item:hover {
+  background-color: $med-gray;
+  .playbtn{
+    display: block;
+  }
 }
+

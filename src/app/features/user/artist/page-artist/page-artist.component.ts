@@ -17,6 +17,10 @@ export class PageArtistComponent implements OnInit {
   public albums: any[] = [];
   public moreAlbums: boolean = false;
   public moreTracks: boolean = false;
+  fixed: boolean = false;
+  dntShow : boolean = false;
+  scrollValue !: number;
+  bgColor !: string;
 
   constructor( private activatedRoute: ActivatedRoute, private artistService: ArtistService ) { /*empty*/ }
 
@@ -25,6 +29,20 @@ export class PageArtistComponent implements OnInit {
     this.getArtist();
     this.getTopTracks();
     this.getAlbums();
+  }
+  onScroll(event: any) {
+    // visible height + pixel scrolled >= total height 
+    this.scrollValue = event.target.offsetHeight - event.target.scrollTop * 2;
+    this.bgColor = 'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1)' + (this.scrollValue/2.5) + '%)';
+      if (this.scrollValue < 45) {
+      console.log(this.scrollValue);
+      this.fixed = true;
+      this.dntShow = true;
+    }
+    else {
+      this.fixed = false;
+      this.dntShow = false;
+    }
   }
 
   // get artist id from active route

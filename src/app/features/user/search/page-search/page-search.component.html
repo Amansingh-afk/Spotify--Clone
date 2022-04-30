@@ -3,11 +3,11 @@
         <div id="topbar">
             <div class="header w-75 d-flex">
                 <div>
-                    <button class="nav_btn prev" [routerLink]="['/user/home']">
+                    <button class="nav_btn prev" (click)="goBack()">
                         <i class="fa fa-angle-left"></i>
                     </button>
-                    <button class="nav_btn">                  
-                             <i class="fa fa-angle-right"></i>
+                    <button class="nav_btn">
+                        <i class="fa fa-angle-right"></i>
                     </button>
                 </div>
 
@@ -21,24 +21,6 @@
 
             <div id="right">
                 <i class="fa fa-bell"></i>
-                <div class="menu-wrap">
-                    <ul class="menu">
-                        <li class="menu-item">
-                            <i id="cog-icon" class="fa fa-cog"></i>
-                            <!-- <ul class="drop-menu">
-                                <li class="drop-menu-item">
-                                    <a href="#">Page 1</a>
-                                </li>
-                                <li class="drop-menu-item">
-                                    <a href="#">Page 2</a>
-                                </li>
-                                <li class="drop-menu-item">
-                                    <a href="#">Page 3</a>
-                                </li>
-                            </ul> -->
-                        </li>
-                    </ul>
-                </div>
                 <button class="btn dntClick_btn">
                     Don't Click here
                 </button>
@@ -47,6 +29,28 @@
     </header>
     <section class="result-section">
         <div class="search-section__search-item-container">
+            <div class="search-section__tracks-container"
+                [ngClass]="moreTracks ? 'show' : 'search-section__tracks-container--hide'"
+                *ngIf="tracksList.length > 0">
+                <div class="search-section__title-container">
+                    <div id="sub-header" class=" m-0">
+                        <h3 class="search-section__title ms-1">Songs</h3>
+                        <div class="">
+                            <button class="me-2 p-2" (click)="seeMoreTracks()">
+                                SEE ALL
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <button class="btn-template search-section__btn" (click)="seeMoreTracks()">{{ "search.more-btn"}}</button> -->
+                <div class="search-section__search-item container testX p-0">
+                    <div class="">
+                        <app-search-track-item class="" [track]="track" [moreTracks]="moreTracks"
+                            *ngFor="let track of tracksList; let iter = index" [it]="iter">
+                        </app-search-track-item>
+                    </div>
+                </div>
+            </div>
             <div class="search-section__artists-container mt-3"
                 [ngClass]="moreArtists ? 'show' : 'search-section__artists-container--hide'"
                 *ngIf="artistsList.length > 0">
@@ -69,28 +73,7 @@
                     </div>
                 </div>
             </div>
-            <div class="search-section__tracks-container"
-                [ngClass]="moreTracks ? 'show' : 'search-section__tracks-container--hide'"
-                *ngIf="tracksList.length > 0">
-                <div class="search-section__title-container">
-                    <div id="sub-header" class=" m-0">
-                        <h3 class="search-section__title ms-1">Songs</h3>
-                        <div class="">
-                            <button class="me-2 p-2" (click)="seeMoreTracks()">
-                                SEE ALL
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- <button class="btn-template search-section__btn" (click)="seeMoreTracks()">{{ "search.more-btn"}}</button> -->
-                <div class="search-section__search-item container testX p-0">
-                    <div class="row">
-                        <app-search-track-item class="col-3" [track]="track" [moreTracks]="moreTracks"
-                            *ngFor="let track of tracksList; let iter = index" [it]="iter">
-                        </app-search-track-item>
-                    </div>
-                </div>
-            </div>
+
             <div class="search-section__float-btn-container" *ngIf="moreArtists || moreTracks">
                 <a class="float-btn" (click)="scrollTo('searchId')">
                     <span class="fas fa-chevron-up float-btn-icon"></span>

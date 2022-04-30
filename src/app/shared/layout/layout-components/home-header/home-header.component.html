@@ -1,8 +1,8 @@
-<header>
+<header class="sticky-top">
     <div id="topbar">
         <div class="header w-75 d-flex">
             <div class="header--buttons">
-                <button class="header--button previous" [routerLink]="['/user/home']">
+                <button class="header--button previous" (click)="goBack()">
                     <i class="fa fa-angle-left"></i>
                 </button>
                 <button class="header--button next">

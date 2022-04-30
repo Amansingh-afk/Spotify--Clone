@@ -34,7 +34,7 @@ export class ArtistService {
 
   // get artist top tracks
   public getTopTracks(artistId: string): Observable<APIArtistTracks[]> {
-    const artistUrl: string = `artists/${ artistId }/top-tracks?country=us`;
+    const artistUrl: string = `artists/${ artistId }/top-tracks?country=in`;
 
     return this.globalService.getArtistTrackQuery(artistUrl).pipe(
       map((res: APIArtistTracks[]) => {

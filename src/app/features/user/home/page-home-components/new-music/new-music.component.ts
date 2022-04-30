@@ -10,13 +10,9 @@ export class NewMusicComponent implements OnInit {
     { title: 'Bollywood rock', imgurl: 'assets/image/hindi-party/bollywood-rock.jpeg' },
     { title: 'Bollywood rock', imgurl: 'assets/image/hindi-party/bollywood-rock.jpeg' },
     { title: 'Bollywood rock', imgurl: 'assets/image/hindi-party/bollywood-rock.jpeg' },
-    { title: 'Bollywood rock', imgurl: 'assets/image/hindi-party/bollywood-rock.jpeg' },
-    { title: 'Bollywood rock', imgurl: 'assets/image/hindi-party/bollywood-rock.jpeg' },
     { title: 'Bollywood rock', imgurl: 'assets/image/hindi-party/bollywood-rock.jpeg' }
   ];
   cardInfo2: Array<{ title: string, imgurl: string }> = [
-    { title: 'Bollywood rock', imgurl: 'assets/image/hindi-party/bollywood-rock.jpeg' },
-    { title: 'Bollywood rock', imgurl: 'assets/image/hindi-party/bollywood-rock.jpeg' },
     { title: 'Bollywood rock', imgurl: 'assets/image/hindi-party/bollywood-rock.jpeg' },
     { title: 'Bollywood rock', imgurl: 'assets/image/hindi-party/bollywood-rock.jpeg' },
     { title: 'Bollywood rock', imgurl: 'assets/image/hindi-party/bollywood-rock.jpeg' },

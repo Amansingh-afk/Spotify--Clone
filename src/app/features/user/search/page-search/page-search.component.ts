@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Location } from '@angular/common';
 // Services
 import { SearchService } from '../services/search.service';
 import { Router } from '@angular/router';
@@ -17,8 +18,10 @@ export class PageSearchComponent implements OnInit {
   public moreTracks: boolean = false;
   // public activeLanguage: string = 'en';
   numRows !: 5;
-  
-  constructor( private searchService: SearchService, private router: Router ) { /*empty*/ }
+
+  constructor(private searchService: SearchService,
+              private router: Router,
+              private location: Location) { /*empty*/ }
 
   ngOnInit(): void { /*empty*/ }
 
@@ -46,6 +49,9 @@ export class PageSearchComponent implements OnInit {
       console.log('Complete!');
     });
   }
+  public goBack(): void {
+    this.location.back();
+  }
 
   // update variable to see more/less artists
   public seeMoreArtists(): void {
@@ -57,6 +63,7 @@ export class PageSearchComponent implements OnInit {
   public seeMoreTracks(): void {
     this.moreTracks = !this.moreTracks;
   }
+
 
   // scroll to element
   public scrollTo(elementId: string): void {

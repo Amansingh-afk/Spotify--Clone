@@ -1,8 +1,15 @@
-<div class="album-item" *ngIf="album" (click)="seeAlbum(album)">
-    <div class="album-item__img-container">
-        <img class="album-item__img" [src]="album.images | errorImage" alt="{{ album.name }}">
-    </div>
-    <div class="album-item__name-container">
-        <a class="album-item__name" [routerLink]="['/album', album.id]">{{ album.name }}</a>
+<div *ngIf="it < 4">
+    <div class="card">
+        <div class="cover artist" *ngIf="album" (click)="seeAlbum(album)">
+            <img [src]="album.images | errorImage" [alt]="album.name" />
+            <div class="play-icon">
+                <i class="fa fa-play"></i>
+            </div>
+        </div>
+        <div class="card-content">
+            <h4><a [routerLink]="['user/album', album.id]">{{album.name | titlecase}}</a></h4>
+            <!-- <p>{{newRelease.artists | titlecase}}</p> -->
+        </div>
     </div>
 </div>
+
