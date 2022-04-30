@@ -5,7 +5,6 @@ import { GlobalComponentsModule } from '../global-components/global-components.m
 
 import { DashboardComponent } from './layout-components/dashboard/dashboard.component';
 import { HomeHeaderComponent } from './layout-components/home-header/home-header.component';
-import { LibraryHeaderComponent } from './layout-components/library-header/library-header.component';
 import { PageHomeLayoutComponent } from './layout-structures/page-home-layout/page-home-layout.component';
 import { PageSearchLayoutComponent } from './layout-structures/page-search-layout/page-search-layout.component';
 import { PageLibraryLayoutComponent } from './layout-structures/page-library-layout/page-library-layout.component';
@@ -17,7 +16,6 @@ import { PageAlbumLayoutComponent } from './layout-structures/page-album-layout/
   declarations: [
     DashboardComponent,
     HomeHeaderComponent,
-    LibraryHeaderComponent,
     PageHomeLayoutComponent,
     PageSearchLayoutComponent,
     PageLibraryLayoutComponent,
