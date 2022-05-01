@@ -9,7 +9,7 @@ import { APIArtistAlbums } from 'src/app/features/user/artist/models/artist-albu
 
 @Injectable() // provide service in module
 export class GlobalService {
-  authToken = 'Bearer BQDtKihN-F4jktESDJc6gfnVm3_5_NsAiTgLkpgyC5jckPXDz6SsZiAIjB0RB7WUNam7Ch8B-7wxxyYsNy6mWcbXDR4wRUYfyLxU7SdP7AtBW_uZi2kn2OztNVkiGt4LW3L3qwYaDR_l-UBmJixdbyQOW4IL9eCeWvA';
+  authToken = 'Bearer BQC8QW3qZBfsbe4F8tutGLeAHJvvmpfbedGKqgSc-t6ZGhUcp1eYJt_eMjeE6D2hMUBUHc9FH2lnjdFyo4SFf8GOiRxfB-6OT1InNWxLcIH9MtRmu5n7AI82_djv0LQdBxZxB9uwYODDbXA2JB4A6XAEBYEcc5rQvbw';
    constructor(private http: HttpClient) { /*empty*/ }
 
   public getSearchQuery(query: string) {

@@ -1,27 +1,47 @@
-# MMusicApp
+# Spotify Angular App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
+A simple spotify clone created using Angular 13, Bootstrap 5 and Spotify API.
+An Angular app based on spotify.
 
-## Development server
+## Working application
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Features
+     Spotify api
+     Search
+     Album
+     Artists --> Top tracks/ Albums 
+     Image verification
+     Uri verification
+     Spotify widgets (Embed).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Principles
+ All components are following:
 
-## Build
+* OnPush Change Detection and async pipes: all components use observable and async pipe for rendering data without any single manual subscribe. Only some places are calling subscribe for dispatching an action, which I will have a refactor live stream session with my friend @nartc to use the component store for a fully subscribe-less application.
+* Tree-shakable components, meaning each component will have a respective module.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Setting the development enviorment
+    git clone https://github.com/Amansingh-afk/Spotify--Clone.git
+    cd angular-spotify
+    npm start for starting Angular web application
+    The app should run on http://localhost:4200/
 
-## Running unit tests
+## Setting up authToken
+* Head here :
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+        https://developer.spotify.com/console/
+* Get your authToken. Then:
 
-## Running end-to-end tests
+        src-> app-> shared-> services-> global services.ts
+* At line 12, paste your authToken
+    
+    For ex:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+        authToken = " Bearer 'your authToken' "
 
-## Further help
+## Upcoming features
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* Playlist creation
+* User recommendation
+* Spotify login
