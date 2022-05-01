@@ -1,10 +1,11 @@
 # Spotify Angular App
 
 A simple spotify clone created using Angular 13, Bootstrap 5 and Spotify API.
+
 An Angular app based on spotify.
 
 ## Working application
-
+coming Soon.
 
 ## Features
      Spotify api
@@ -23,9 +24,11 @@ An Angular app based on spotify.
 
 ## Setting the development enviorment
     git clone https://github.com/Amansingh-afk/Spotify--Clone.git
-    cd angular-spotify
-    npm start for starting Angular web application
-    The app should run on http://localhost:4200/
+ cd angular-spotify
+
+npm start for starting Angular web application
+
+The app should run on http://localhost:4200/
 
 ## Setting up authToken
 * Head here :
