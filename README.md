@@ -42,6 +42,7 @@ The app should run on http://localhost:4200/
     For ex:
 
         authToken = " Bearer 'your authToken' "
+        
 ##ScreenShots
   
   * Home page
