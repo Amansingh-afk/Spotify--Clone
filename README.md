@@ -43,7 +43,8 @@ The app should run on http://localhost:4200/
 
         authToken = " Bearer 'your authToken' "
         
-##ScreenShots
+        
+## ScreenShots
   
   * Home page
 ![WhatsApp Image 2022-07-22 at 8 48 13 AM](https://user-images.githubusercontent.com/90978519/180359109-4ed8d589-d55a-48c0-a742-d9b5f0e3fa23.jpeg)
