@@ -17,9 +17,9 @@ coming Soon.
      Spotify widgets (Embed).
 
 ## Principles
- All components are following:
-
-* OnPush Change Detection and async pipes: all components use observable and async pipe for rendering data without any single manual subscribe. Only some places are calling subscribe for dispatching an action, which I will have a refactor live stream session with my friend @nartc to use the component store for a fully subscribe-less application.
+ components are following:
+ 
+* OnPush Change Detection and async pipes: all components use observable and async pipe for rendering data without any single manual subscribe.
 * Tree-shakable components, meaning each component will have a respective module.
 
 ## Setting the development enviorment
