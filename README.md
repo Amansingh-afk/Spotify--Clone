@@ -8,13 +8,13 @@ An Angular app based on spotify.
 coming Soon.
 
 ## Features
-     Spotify api
-     Search
-     Album
-     Artists --> Top tracks/ Albums 
-     Image verification
-     Uri verification
-     Spotify widgets (Embed).
+     * Spotify api
+     * Search
+     * Album
+     * Artists --> Top tracks/ Albums 
+     * Image verification
+     * Uri verification
+     * Spotify widgets (Embed).
 
 ## Principles
  components are following:
